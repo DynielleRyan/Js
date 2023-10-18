@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        /*
         const name = 'Ryan';
         console.log(`my name is ${name}`)
 
@@ -18,6 +19,56 @@
 
         let totalCost = cost + tax;
         console.log(`Total cost: $${totalCost}`);
+        
+
+        //6a onwards
+        let hour = 12;
+        let name = 'Dynielle Ryan'
+        if(hour >= 6 && hour < 12){
+            console.log(`Good Morning ${name}!`)
+        }else if(hour >= 13 && hour < 17){
+            console.log(`Good Afternoon ${name}!`)
+        }else{
+            console.log(`Good Night! ${name}`)
+        }
+        
+
+        //6d onwards
+        let age = 22 ;
+        let isHoliday = true;
+
+        if((age <= 6 || age >= 65) && isHoliday === true){
+            console.log('Discount');
+        }else{
+            console.log('no discount');
+        }
+        */
+
+        //6f
+        let randomNumber = Math.random();
+        let result ='';
+        let guess = 'heads';
+
+        /*if(randomNumber < 0.5){
+            result = 'heads';
+        }else{
+            result = 'tails';
+        }
+        */
+
+      result = randomNumber < 0.5 ? 'heads' : 'tails';
+        
+
+        /*if(guess === result){
+            console.log('You win');
+        }else{
+            console.log('You lose');
+        }
+
+        */
+       let answer = guess === result ? 'You win' : 'You lose';
+
+        console.log(answer);
 
 
     </script>
