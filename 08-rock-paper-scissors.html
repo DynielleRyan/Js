@@ -29,16 +29,21 @@
     <script>
         //getsItem gets the item that was previously set, and then parses it, which means its converted back to an actual object
         let score = JSON.parse(localStorage.getItem
-        ('score'));
+        ('score')) || {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        }; //if left side is truthy, it will use the left side code, if falsy it will use the default operator
 
-        if (score === null){
+        /*
+        if (!score){
             score = {
                 wins: 0,
                 losses: 0,
                 ties: 0
             };
         }
-
+        */
 
         
         function playGame(playerMove){

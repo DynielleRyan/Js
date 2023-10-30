@@ -80,7 +80,7 @@
         greet('Sophia');
         greet('Ryan');
         greet();
-        */
+        
 
         let score;
 
@@ -89,6 +89,62 @@
 
         console.log(score.wins);
         console.log(score.losses);
+        
+        //8a to d
+        const cart = {
+            product: 'basketball',
+            price: 2095,
+            'delivery-time': '3 days'
+        }
+        cart.price = 2595;
+        console.log(cart['delivery-time']);
+
+       const product1 = {
+            name: 'Ball',
+            price: 100
+        }
+        const product2 = {
+            name: 'shirt',
+            price: 200
+        }
+
+        console.log(comparePrice(product1,product2));
+
+        function comparePrice(product1, product2){
+            if(product1.price > product2.price){
+                return product1;
+            }else{
+                return product2;
+            }
+        }
+       
+
+        const product1 = {
+            name:'basketball',
+            price: 2002
+        };
+        const product2 = {
+            name:'basketball',
+            price: 2002
+        }
+
+        console.log(isSameProduct(product1,product2));
+
+        function isSameProduct(product1,product2){
+            if(product1.name === product2.name && 
+               product1.price === product2.price){
+                return true;
+            }else{
+                return false;
+            }
+        }
+         */
+
+         const str = 'Good Morning';
+         console.log(str.toLowerCase());
+        
+       
+
 
     </script>
 </body>
