@@ -25,6 +25,7 @@
         score.losses = 0;
         score.ties = 0;
         localStorage.removeItem('score');
+        updateScoreElement();
     ">Reset Score</button>
 
     <script>
@@ -36,8 +37,7 @@
             ties: 0
         }; //if left side is truthy, it will use the left side code, if falsy it will use the default operator
 
-        document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, 
-        Losses: ${score.losses}, Ties: ${score.ties})`;
+        updateScoreElement();
 
         /*
         if (!score){
@@ -49,7 +49,6 @@
         }
         */
 
-        
         function playGame(playerMove){
             const computerMove = pickComputerMove();
             let result = '';
@@ -95,9 +94,21 @@
             //making score into a string using stringify 
             localStorage.setItem('score', JSON.stringify(score));
 
+            updateScoreElement();
+           /* 
+           document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, 
+              Losses: ${score.losses}, Ties: ${score.ties})`; 
+        ---- Made into a function to shorten the code.      
+              */ 
+
             alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
                                           
+        }
+
+        function updateScoreElement(){
+            document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, 
+                 Losses: ${score.losses}, Ties: ${score.ties})`;
 
         }
             
