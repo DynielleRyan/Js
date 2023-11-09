@@ -9,7 +9,6 @@
     <p>Rock Paper Scissors</p>
     <button onclick="
        playGame('Rock');
-
     ">Rock</button>
     <button onclick="
        playGame('Paper')
@@ -18,6 +17,8 @@
         playGame('Scissors');
     ">Scissors</button>
 
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
     <p class="js-score"></p>
 
     <button onclick="
@@ -38,6 +39,8 @@
         }; //if left side is truthy, it will use the left side code, if falsy it will use the default operator
 
         updateScoreElement();
+
+        
 
         /*
         if (!score){
@@ -95,15 +98,14 @@
             localStorage.setItem('score', JSON.stringify(score));
 
             updateScoreElement();
+
+            document.querySelector('.js-result').innerHTML = result;
+            document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
            /* 
            document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, 
               Losses: ${score.losses}, Ties: ${score.ties})`; 
         ---- Made into a function to shorten the code.      
-              */ 
-
-            alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
-                                          
+              */                          
         }
 
         function updateScoreElement(){
