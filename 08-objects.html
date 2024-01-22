@@ -58,7 +58,7 @@
         const jsonString = JSON.stringify(product2);
         JSON.parse(jsonString);
         console.log(JSON.parse(jsonString));
-        */
+       
 
         console.log('hello'.length);
         console.log('hello'.toUpperCase());
@@ -100,6 +100,37 @@
     }
         console.log(object5);
         object5.method();
+         */
+
+         const product2 = {
+            name: 'shirt',
+            ['delivery-time']: 100,
+            rating:{ //nested object
+                stars: 4.5,
+                count: 87
+            },
+            fun: function function1 () {
+               console.log('function inside object') 
+            } 
+         };
+
+         console.log(product2);
+         console.log(product2.name);
+         console.log(product2['name']);
+         console.log(product2['delivery-time']);
+         console.log(product2.rating.stars)
+         product2.fun();
+
+         //built in objects such as console, JSON, localStorage
+         //JSON is universal and supports almost all programming languages,
+         //but it has less features than an actual object
+         //local Storage Object only supports strings
+
+         console.log(JSON.stringify(product2));
+         const jsonString = JSON.stringify(product2);
+
+         console.log(JSON.parse(jsonString));
+
         </script>
 </body>
 </html>
