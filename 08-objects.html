@@ -100,7 +100,7 @@
     }
         console.log(object5);
         object5.method();
-         */
+       
 
          const product2 = {
             name: 'shirt',
@@ -130,6 +130,28 @@
          const jsonString = JSON.stringify(product2);
 
          console.log(JSON.parse(jsonString));
+
+           */
+
+           console.log('hello'.length); //length is a property
+           console.log('hello'.toUpperCase()) //this is a method
+
+           //autoboxing, automatically wraps the strings into a special object
+           //objects are references
+
+           const object1 = {       //objects are references that points to the object somewhere else in the memory
+                message: 'hello'
+           };
+
+           const object2 = object1; //this is a copy by reference, we are copying the reference, points to the same object
+           console.log(object2.message);
+
+           object1.message = {
+            message: 'good job'
+           };
+
+           console.log(object1);
+           console.log(object2);
 
         </script>
 </body>
